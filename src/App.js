@@ -8,32 +8,63 @@ import NavBar from "./components/NavBar/navbar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import "bulma/css/bulma.css";
 
-
 function App() {
     return (
-        <div className= "App"> 
-            <NavBar/>
-            <ItemListContainer greeting={"Bienvenidos a Vida Nómade"}/>
-            <section className="hero">
-                <div className="hero-body">
-                    <h1> Opciones de Viajes Disponibles </h1>
-                </div>
-            </section>
+        <div className="App">
+            <div>
+                <section className="hero is-primary">
+                    <div className="hero-body">
+                        <div className="container">
+                            <h1 className="title">Vida Nómade</h1>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
             <div className="container">
                 <div className="columns">
                     <div className="column is-4">
-                        <ProfileCard titulo="Portugal" descripcion="Una semana en las calles portuguesas." img={PortImg} />
+                        <NavBar />
                     </div>
                     <div className="column is-4">
-                        <ProfileCard titulo="Francia" descripcion="15 dias en la ciudad del amor." img={FranImg} />
+                        <ItemListContainer greeting={"Bienvenidos a Vida Nómade"} />
                     </div>
-                    <div className="column is-4">
-                        <ProfileCard titulo="Bélgica" descripcion="Ruta de las cervezas belgas." img={BelgImg} />
-                    </div>
+                    <section className="hero">
+                        <div className="column is-4">
+                            <h1> Opciones de Viajes Disponibles </h1>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        <div className="container">
+            <div className="columns">
+                <div className="column is-4">
+                    <ProfileCard titulo="Portugal" descripcion="Una semana en las calles portuguesas." img={PortImg} />
+                    <button> Reservar</button>
+                </div>
+                <div className="column is-4">
+                    <ProfileCard titulo="Bélgica" descripcion="Ruta de las cervezas belgas." img={BelgImg} />
+                    <button> Reservar</button>
+                </div>
+                <div className="column is-4">
+                    <ProfileCard titulo="Francia" descripcion="15 días en la ciudad del amor." img={FranImg} />
+                    <button> Reservar</button>
                 </div>
             </div>
         </div>
-    )
+
+    {/* Pie de Página */ }
+    <footer className="footer">
+        <div className="content has-text-centered">
+            <p>
+                © 2023 Mi Página Web. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+        </div >
+    );
 }
+
 
 export default App;

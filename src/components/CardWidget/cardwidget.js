@@ -1,9 +1,11 @@
-import cart from "./assets/cart.png";
+//import cart from "./assets/cart.png";
+import { FaShoppingCart } from 'react-icons/fa';
 
 const CartWidget = () => {
     return (
-        <div>
-<img src= {cart} alt= "favicon"></img>
+        <div className= "content has-text-centered">
+<FaShoppingCart />
+<span className= "numeroCarrito">1</span>
         </div>
     )
 }
