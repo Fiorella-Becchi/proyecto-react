@@ -54,11 +54,11 @@ function App() {
             </div>
         </div>
 
-    {/* Pie de Página */ }
+    
     <footer className="footer">
         <div className="content has-text-centered">
             <p>
-                © 2023 Mi Página Web. Todos los derechos reservados.
+                © 2023 Vida Nómade. Todos los derechos reservados.
             </p>
         </div>
     </footer>
