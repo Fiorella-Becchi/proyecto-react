@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+            <div className="container-fluid">
                 <a href="index.html" className="navbar-brand">Inicio</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -16,7 +16,7 @@ const NavBar = () => {
                         <li className="nav-item"> Quiénes Somos</li>
                         <li className="nav-item">Nuestros Viajes</li>
                         <li className="nav-item"> Sugerencias Viajeras</li>
-                        <li class="nav-item">Contacto</li>
+                        <li className="nav-item">Contacto</li>
                     </ul>
                 </div>
             </div>
