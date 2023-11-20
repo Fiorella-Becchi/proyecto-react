@@ -29,20 +29,17 @@ function ProfileCard(props) {
                     <h3 className="title is-4">{props.titulo}</h3>
                     <p className="subtitle is-6">{props.descripcion}</p>
                 </div>
-                    <div className="columns">
-                        <div className="column is-4">
-                            <button onClick={handleClickSuma} className="button is-primary">+</button>
-                        </div>
-
-                    </div>
+                <div className="columns">
                     <div className="column is-4">
                         <span>Likes {count} </span>
                     </div>
-                    <div>
-                        <button onClick={handleClickResta} className="button is-primary">-
-
-                        </button>
+                    <div className="column is-5">
+                        <button onClick={handleClickSuma} className="button is-primary is-small rounded is-right">+</button>
+                        </div>
+                        <div className="column is-5">
+                        <button onClick={handleClickResta} className="button is-primary is-small rounded is-right">-</button>
                     </div>
+                </div>
             </div>
         </div>
     )
