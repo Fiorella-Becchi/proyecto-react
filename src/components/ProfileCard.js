@@ -35,8 +35,8 @@ function ProfileCard(props) {
                     </div>
                     <div className="column is-5">
                         <button onClick={handleClickSuma} className="button is-primary is-small rounded is-right">+</button>
-                        </div>
-                        <div className="column is-5">
+                    </div>
+                    <div className="column is-5">
                         <button onClick={handleClickResta} className="button is-primary is-small rounded is-right">-</button>
                     </div>
                 </div>

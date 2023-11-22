@@ -1,17 +1,14 @@
-import './Item.css'
-import { Link }from "react-router-dom";
+import ItemCount from "../ItemCount/ItemCount";
 import FranImg from "../../img/francia.jpg";
 import BelgImg from "../../img/belgica.jpg";
 import PortImg from "../../img/portugal.jpg";
-import '../../asyncMock';
 
-
-const Item = ({ id, name, img, price, stock }) => {
+const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     return (
         <article className="CardItem">
             <header className="Header">
                 <h2 className="ItemHeader">
-
+                    {name}
                 </h2>
             </header>
             <picture>
@@ -19,20 +16,21 @@ const Item = ({ id, name, img, price, stock }) => {
             </picture>
             <section>
                 <p className="Info">
-                    Precio: ${price}
+                    Categoria: {category}
                 </p>
                 <p className="Info">
-                    Stock Disponible: {stock}
+                    Descripcion: {description}
+                </p>
+                <p className="Info">
+                    Precio: ${price}
                 </p>
             </section>
-            <footer className="ItemFooter">
-                <Link to={'/item/${id}'} className='Option'>Ver detalle</Link>
+            <footer className='ItemFooter'>
+            
             </footer>
         </article>
     )
 }
+export default ItemDetail;
 
-
-
-
-export default Item
+/* <ItemCount initial={1} stock={stock} onAdd={quantity => console.log('Cantidad agregada')} />*/

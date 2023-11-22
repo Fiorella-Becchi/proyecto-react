@@ -1,5 +1,6 @@
 import CartWidget from "../CardWidget/cardwidget";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink, Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -11,6 +12,7 @@ const NavBar = () => {
                     aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
+                {/*
                 <div className="collapse navbar-collapse justify-content-space-around" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item"> Quiénes Somos</li>
@@ -18,6 +20,20 @@ const NavBar = () => {
                         <li className="nav-item"> Sugerencias Viajeras</li>
                         <li className="nav-item">Contacto</li>
                     </ul>
+                </div>
+    */ }
+            </div>
+            <div className="container">
+                <div className="columns">
+                    <div className="Categories column is-2 ">
+                        <Link to='/'>
+                            <h3>Inicio</h3>
+                        </Link>
+
+                        <NavLink to={'/category/viajeturistico'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje Turístico</NavLink>
+                        <NavLink to={'/category/viajeestudiantil'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje Estudiantil</NavLink>
+                        <NavLink to={'/category/viajedeparejas'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje de Parejas</NavLink>
+                    </div>
                 </div>
             </div>
             <CartWidget />
