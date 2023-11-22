@@ -26,31 +26,19 @@ const ItemListContainer = ({ greeting }) => {
             })
     }, [categoryId])
     return (
-        <div>
-            <h1 className="has-text-centered"> {greeting} </h1>
-            {products.map((product) => {
-                return (
-                    <div className="container">
-                        <div className="columns">
-                            <div className="column is-4">
-                                <ProfileCard titulo="Portugal" descripcion="Una semana en las calles portuguesas." img={PortImg} />
-                                <button className="button is-primary is-small rounded is-right"><Link to='item/{product.id}'>Ver Info</Link></button>
-                            </div>
-                            <div className="column is-4">
-                                <ProfileCard titulo="Bélgica" descripcion="Ruta de las cervezas belgas." img={BelgImg} />
-                                <button className="button is-primary is-small rounded is-right">
-                                <Link to='item/{product.id}'>Ver Info</Link></button>
-                            </div>
-                            <div className="column is-4">
-                                <ProfileCard titulo="Francia" descripcion="15 días en la ciudad del amor." img={FranImg} />
-                                <button className="button is-primary is-small rounded is-right"> <Link to='item/{product.id}'>Ver Info</Link></button>
-                            </div>
-                        </div>
-                        <Link to='item/{product.id}'>Ver Info</Link>
+        <div className="container">
+            <h1 className="title has-text-centered"> {greeting} </h1>
+            <div className="columns is-multiline is-flex">
+                {products.map((product) => (
+                    <div className="column is-6" key={product.id}>
+                        <ProfileCard titulo={product.name} descripcion={product.description} img={product.img} />
+                        <button className="button is-primary is-small rounded is-right">
+                            <Link to={`item/${product.id}`}>Ver Info</Link>
+                        </button>
                     </div>
-    )
-})}
-        </div >
+                ))}
+            </div>
+        </div>
     )
 }
 
