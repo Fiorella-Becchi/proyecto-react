@@ -1,4 +1,4 @@
-import CartWidget from "../CardWidget/cardwidget";
+import CardWidget from "../CardWidget/cardwidget";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink, Link } from 'react-router-dom'
 
@@ -36,7 +36,8 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
-            <CartWidget />
+            <CardWidget />
+            <Link to="/">Inicio</Link>
         </nav>
     )
 }
