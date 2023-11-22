@@ -37,51 +37,23 @@ function App() {
                             </Routes>
                         </BrowserRouter>
                     </div>
-                    <div className="column is-4">
-                        <ItemListContainer greeting={"Bienvenidos a Vida Nómade"} />
-                    </div>
-                    <section className="hero">
-                        <div className="column is-4">
-                            <h1 className="has-text-center"> Viajes Disponibles </h1>
-                        </div>
-                    </section>
                 </div>
+                <footer className="footer">
+                    <div className="content has-text-centered">
+                        <p>
+                            © 2023 Vida Nómade. Todos los derechos reservados.
+                        </p>
+                    </div>
+                </footer>
             </div>
-            <div className="container">
-                <div className="columns">
-                    <div className="column is-4">
-                        <ProfileCard titulo="Portugal" descripcion="Una semana en las calles portuguesas." img={PortImg} />
-                        <button className="button is-primary is-small rounded is-right"> Ver Info</button>
-                    </div>
-                    <div className="column is-4">
-                        <ProfileCard titulo="Bélgica" descripcion="Ruta de las cervezas belgas." img={BelgImg} />
-                        <button className="button is-primary is-small rounded is-right"> Ver Info</button>
-                    </div>
-                    <div className="column is-4">
-                        <ProfileCard titulo="Francia" descripcion="15 días en la ciudad del amor." img={FranImg} />
-                        <button className="button is-primary is-small rounded is-right"> Ver Info</button>
-                    </div>
-                </div>
-                <div className="container">
-                    <ItemDetailContainer />
-
-                    <div className="has text-centered column is-2" style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)' }} >
-                        <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada', quantity)} />
-                    </div>
-                </div>
-            </div>
-
-
-            <footer className="footer">
-                <div className="content has-text-centered">
-                    <p>
-                        © 2023 Vida Nómade. Todos los derechos reservados.
-                    </p>
-                </div>
-            </footer>
-        </div >
+        </div>
     );
 }
 
 
+
 export default App;
+
+
+
+
