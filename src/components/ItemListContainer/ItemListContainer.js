@@ -34,15 +34,16 @@ const ItemListContainer = ({ greeting }) => {
                         <div className="columns">
                             <div className="column is-4">
                                 <ProfileCard titulo="Portugal" descripcion="Una semana en las calles portuguesas." img={PortImg} />
-                                <button className="button is-primary is-small rounded is-right"> Ver Info</button>
+                                <button className="button is-primary is-small rounded is-right"><Link to='item/{product.id}'>Ver Info</Link></button>
                             </div>
                             <div className="column is-4">
                                 <ProfileCard titulo="Bélgica" descripcion="Ruta de las cervezas belgas." img={BelgImg} />
-                                <button className="button is-primary is-small rounded is-right"> Ver Info</button>
+                                <button className="button is-primary is-small rounded is-right">
+                                <Link to='item/{product.id}'>Ver Info</Link></button>
                             </div>
                             <div className="column is-4">
                                 <ProfileCard titulo="Francia" descripcion="15 días en la ciudad del amor." img={FranImg} />
-                                <button className="button is-primary is-small rounded is-right"> Ver Info</button>
+                                <button className="button is-primary is-small rounded is-right"> <Link to='item/{product.id}'>Ver Info</Link></button>
                             </div>
                         </div>
                         <Link to='item/{product.id}'>Ver Info</Link>
