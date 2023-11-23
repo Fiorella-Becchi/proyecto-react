@@ -10,9 +10,9 @@ const products = [
         name: 'Portugal',
         price: 500,
         category: 'Viaje estudiantil',
-        img: PortImg ,
+        img: PortImg,
         stock: '30',
-        description: 'Información del viaje'
+        description: 'Informacion del viaje'
 
     },
     {
@@ -20,18 +20,18 @@ const products = [
         name: 'Belgica',
         price: 300,
         category: 'Viaje turístico',
-        img: BelgImg ,
+        img: BelgImg,
         stock: '25',
-        description: 'Información del viaje'
+        description: 'Informacion del viaje'
     },
     {
         id: '3',
         name: 'Francia',
         price: 250,
         category: 'Viaje de parejas',
-        img: FranImg ,
+        img: FranImg,
         stock: '10',
-        description: 'Información del viaje'
+        description: 'Informacion del viaje'
     }
 ]
 
@@ -44,7 +44,7 @@ export const getProducts = () => {
 }
 
 export const getProductById = (productId) => {
-    return new Promise((resolve) => { 
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find(prod => prod.id === productId))
         }, 500)

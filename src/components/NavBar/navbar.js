@@ -6,7 +6,7 @@ const NavBar = () => {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a href="index.html" className="navbar-brand">Inicio</a>
+                <Link to='/' className="navbar-brand">Inicio</Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -26,10 +26,6 @@ const NavBar = () => {
             <div className="container">
                 <div className="columns">
                     <div className="Categories column is-2 ">
-                        <Link to='/'>
-                            <h3>Inicio</h3>
-                        </Link>
-
                         <NavLink to={'/category/viajeturistico'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje Turístico</NavLink>
                         <NavLink to={'/category/viajeestudiantil'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje Estudiantil</NavLink>
                         <NavLink to={'/category/viajedeparejas'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje de Parejas</NavLink>
@@ -37,7 +33,6 @@ const NavBar = () => {
                 </div>
             </div>
             <CardWidget />
-            <Link to="/">Inicio</Link>
         </nav>
     )
 }

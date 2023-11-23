@@ -1,8 +1,46 @@
-/*.CardItem {
-    display: flex;
-    align-items:;
-    margin-right: 10px;
-    align-content: stretch;
-    justify-content:space-around
-}*/
+.CardItem {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
+.Header {
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+.ItemHeader {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.ItemImg {
+    width: 100%;
+    height: auto;
+}
+
+.Info {
+    padding: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.ItemFooter {
+    padding: 10px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.Option {
+    text-decoration: none;
+    color:gray;
+    font-weight: bold;
+}
+
+.Option:hover {
+    text-decoration: underline;
+}
