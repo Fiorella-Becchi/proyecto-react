@@ -26,7 +26,7 @@ function App() {
 
             <div className="container">
                 <div className="columns">
-                    <div className="column is-4 ">
+                    <div className="column is-12 ">
                         <BrowserRouter>
                             <NavBar />
                             <Routes>
@@ -37,7 +37,10 @@ function App() {
                             </Routes>
                         </BrowserRouter>
                     </div>
+
                 </div>
+
+
                 <footer className="footer">
                     <div className="content has-text-centered">
                         <p>

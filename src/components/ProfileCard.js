@@ -21,22 +21,22 @@ function ProfileCard(props) {
         <div className="card">
             <div className="card-img">
                 <figure className="image is-1">
-                    <img src={img} alt="fotos paises" />
+                    <img src={img} alt="fotos paises"/>
                 </figure>
             </div>
             <div className="card-content">
-                <div className="media-content">
+                <div className="media-content has-text-centered">
                     <h3 className="title is-4">{props.titulo}</h3>
                     <p className="subtitle is-6">{props.descripcion}</p>
                 </div>
                 <div className="columns">
-                    <div className="column is-4">
+                    <div className="column is-12-mobile is-4-tablet ">
                         <span>Likes {count} </span>
                     </div>
-                    <div className="column is-5">
+                    <div className="column is-6-tablet is-4-desktop">
                         <button onClick={handleClickSuma} className="button is-primary is-small rounded is-right">+</button>
                     </div>
-                    <div className="column is-5">
+                    <div className="column is--6-tablet is-4-desktop">
                         <button onClick={handleClickResta} className="button is-primary is-small rounded is-right">-</button>
                     </div>
                 </div>

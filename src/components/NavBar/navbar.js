@@ -24,11 +24,17 @@ const NavBar = () => {
     */ }
             </div>
             <div className="container">
-                <div className="columns">
-                    <div className="Categories column is-2 ">
-                        <NavLink to={'/category/viajeturistico'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje Turístico</NavLink>
-                        <NavLink to={'/category/viajeestudiantil'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje Estudiantil</NavLink>
-                        <NavLink to={'/category/viajedeparejas'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje de Parejas</NavLink>
+                <div className="Categories column is-mobile ">
+                    < div className="columns is-multiline is-centered is-spaced">
+                        <div className="column is-12-mobile is-6-tablet">
+                            <NavLink to={'/category/viajeturistico'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje Turístico</NavLink>
+                        </div>
+                        <div className="column is-12-mobile is-6-tablet">
+                            <NavLink to={'/category/viajeestudiantil'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje Estudiantil</NavLink>
+                        </div>
+                        <div className="column is-12-mobile is-6-tablet">
+                            <NavLink to={'/category/viajedeparejas'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje de Parejas</NavLink>
+                        </div>
                     </div>
                 </div>
             </div>

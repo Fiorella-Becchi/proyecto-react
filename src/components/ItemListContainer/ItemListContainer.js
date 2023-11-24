@@ -7,16 +7,18 @@ import { Link } from 'react-router-dom'
 import FranImg from '../../img/francia.jpg';
 import BelgImg from '../../img/belgica.jpg';
 import PortImg from '../../img/portugal.jpg';
+import ItemDetail from '../ItemDetail/ItemDetail'
 
 
 
 const ItemListContainer = ({ greeting }) => {
-    const [products, setProducts] = useState([])
+    const [products, setProducts] = useState([]);
+    const [error, setError] = useState(null);
 
     const { categoryId } = useParams()
 
     useEffect(() => {
-        const asyncFunc = categoryId ? getProductsByCategory : getProducts
+        const asyncFunc = categoryId ? () => getProductsByCategory(categoryId) : getProducts
         asyncFunc(categoryId)
             .then(response => {
                 setProducts(response)
@@ -27,10 +29,10 @@ const ItemListContainer = ({ greeting }) => {
     }, [categoryId])
     return (
         <div className="container">
-            <h1 className="title has-text-centered"> {greeting} </h1>
-            <div className="columns is-multiline is-flex">
+            <h1 className="has-text-centered"> {greeting} </h1>
+            <div className="columns is-multiline is-flex is-justify-content-center">
                 {products.map((product) => (
-                    <div className="column is-6" key={product.id}>
+                    <div className="column is-6-tablet is-4-desktop is-3-widescreen" key={product.id}>
                         <ProfileCard titulo={product.name} descripcion={product.description} img={product.img} />
                         <button className="button is-primary is-small rounded is-right">
                             <Link to={`item/${product.id}`}>Ver Info</Link>
