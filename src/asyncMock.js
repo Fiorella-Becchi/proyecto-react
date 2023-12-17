@@ -31,9 +31,9 @@ const products = [
         category: 'Viaje de parejas',
         img: FranImg,
         stock: '10',
-        description: 
-        'Sumérgete en una experiencia romántica sin igual con nuestra oferta de pareja de 20 días a Francia. Desde las encantadoras calles empedradas de París hasta los viñedos idílicos de la región de Borgoña, este viaje está diseñado para crear momentos inolvidables. Disfruta de cenas íntimas con vista a la Torre Eiffel, pasea por los jardines de Versalles de la mano de tu ser querido y déjate seducir por la magia de la Riviera Francesa. Descubre la rica historia, la exquisita gastronomía y el arte que impregnan cada rincón del país. Desde la majestuosidad de los castillos del Valle del Loira hasta los encantadores paisajes de la Provenza, este viaje te brinda la oportunidad de fortalecer los lazos amorosos mientras exploras la belleza incomparable de Francia. ¡Vive la experiencia de un viaje que creará recuerdos románticos duraderos!'
-        
+        description:
+            'Sumérgete en una experiencia romántica sin igual con nuestra oferta de pareja de 20 días a Francia. Desde las encantadoras calles empedradas de París hasta los viñedos idílicos de la región de Borgoña, este viaje está diseñado para crear momentos inolvidables. Disfruta de cenas íntimas con vista a la Torre Eiffel, pasea por los jardines de Versalles de la mano de tu ser querido y déjate seducir por la magia de la Riviera Francesa. Descubre la rica historia, la exquisita gastronomía y el arte que impregnan cada rincón del país. Desde la majestuosidad de los castillos del Valle del Loira hasta los encantadores paisajes de la Provenza, este viaje te brinda la oportunidad de fortalecer los lazos amorosos mientras exploras la belleza incomparable de Francia. ¡Vive la experiencia de un viaje que creará recuerdos románticos duraderos!'
+
     }
 ]
 
@@ -53,12 +53,11 @@ export const getProductById = (productId) => {
     })
 }
 
-export const getProductsByCategory = (category) => {
+export const getProductsByCategory = (categoryId) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            const filteredProducts = products.filter((product) => product.category === category);
-            resolve(filteredProducts);
-        }, 500);
+            resolve(products.filter(prod => prod.category === categoryId))
+        }, 500)
     });
 };
 
