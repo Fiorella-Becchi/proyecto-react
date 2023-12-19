@@ -2,6 +2,7 @@ import FranImg from "./img/francia.jpg";
 import BelgImg from "./img/belgica.jpg";
 import PortImg from "./img/portugal.jpg";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import ProfileCard from "./components/ProfileCard";
 
 
 const products = [
@@ -37,6 +38,19 @@ const products = [
     }
 ]
 
+const category = [
+        {
+            "id": 1,
+            "title": 'Viaje estudiantil'
+        }, {
+            "id": 2,
+            "title":  'Viaje turístico'
+        }, {
+            "id": 3,
+            "title": 'Viaje de parejas'
+        }
+    ];
+
 export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
@@ -61,6 +75,13 @@ export const getProductsByCategory = (categoryId) => {
     });
 };
 
+export const getCategory = (categoryId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(category.find(category => category.id == categoryId));
+        }, 500)
+    })
+}
 
 
 
