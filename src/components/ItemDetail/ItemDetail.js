@@ -1,3 +1,4 @@
+
 import ItemCount from "../ItemCount/ItemCount";
 import FranImg from "../../img/francia.jpg";
 import BelgImg from "../../img/belgica.jpg";
@@ -52,4 +53,3 @@ const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
     )
 }
 export default ItemDetail;
-

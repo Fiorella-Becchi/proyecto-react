@@ -25,7 +25,7 @@ const ItemListContainer = ({ greeting }) => {
                     const data = doc.data();
                     return { id: doc.id, ...data };
                 });
-
+                console.log("Products Adapted:", productsAdapted)
                 setProducts(productsAdapted);
             } catch (error) {
                 console.error(error);
@@ -41,11 +41,12 @@ const ItemListContainer = ({ greeting }) => {
         <div className="container">
             <h1 className="has-text-centered">{greeting}</h1>
             <div className="columns is-multiline is-flex is-justify-content-center">
+                {console.log("Products in JSX:", products)}
                 {products.map((product) => (
                     <div className="column is-6-tablet is-4-desktop is-3-widescreen" key={product.id}>
                         <ProfileCard titulo={product.name} descripcion={product.description} img={product.img} />
                         <button className="button is-primary is-small rounded is-right">
-                            <Link to={`item/${product.id}`}>Ver Info</Link>
+                            <Link to={`/item/${product.id}`}>Ver Info</Link>
                         </button>
                     </div>
                 ))}
