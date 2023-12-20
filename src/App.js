@@ -11,8 +11,8 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { CartProvider } from "./Context/CartContext";
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
-
 import { useEffect, useState } from "react";
+
 
 
 
@@ -46,6 +46,7 @@ function App() {
                                 </Routes>
                             </CartProvider>
                         </BrowserRouter>
+                       
                     </div>
 
                 </div>

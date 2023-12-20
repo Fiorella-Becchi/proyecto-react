@@ -24,6 +24,7 @@ const CheckoutForm = ({ onConfirm }) => {
                         type='text'
                         value={name}
                         onChange={({ target }) => setName(target.value)}
+                        placeholder='Ingrese su nombre'
                     />
                 </label>
                 <label className='Label'>
@@ -33,6 +34,7 @@ const CheckoutForm = ({ onConfirm }) => {
                         type='text'
                         value={phone}
                         onChange={({ target }) => setPhone(target.value)}
+                        placeholder='Ingrese su telefono'
                     />
                 </label>
                 <label className='Label'>
@@ -42,6 +44,7 @@ const CheckoutForm = ({ onConfirm }) => {
                         type='email'
                         value={email}
                         onChange={({ target }) => setEmail(target.value)}
+                        placeholder='Ingrese su email'
                     />
                 </label>
                 <div className='Label'>

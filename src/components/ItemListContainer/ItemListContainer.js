@@ -4,6 +4,7 @@ import { db } from "../../config/firebase";
 import { useParams } from 'react-router-dom';
 import ProfileCard from '../ProfileCard';
 import { Link } from 'react-router-dom';
+import Auth from "../Auth";
 
 const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([]);
@@ -16,14 +17,14 @@ const ItemListContainer = ({ greeting }) => {
         const fetchProducts = async () => {
             try {
                 const collectionRef = categoryId
-                    ? query(collection(db, 'products'), where('category', '==', categoryId))
-                    : collection(db, 'products');
+                    ? query(collection(db, 'items'), where('category', '==', categoryId))
+                    : collection(db, 'items');
 
                 const response = await getDocs(collectionRef);
 
                 const productsAdapted = response.docs.map(doc => {
                     const data = doc.data();
-                    return { id: doc.id, ...data };
+                    return { id: doc.id, nombre: data.nombre, precio: data.precio, cantidad: data.cantidad };
                 });
                 console.log("Products Adapted:", productsAdapted)
                 setProducts(productsAdapted);
@@ -41,16 +42,16 @@ const ItemListContainer = ({ greeting }) => {
         <div className="container">
             <h1 className="has-text-centered">{greeting}</h1>
             <div className="columns is-multiline is-flex is-justify-content-center">
-                {console.log("Products in JSX:", products)}
                 {products.map((product) => (
                     <div className="column is-6-tablet is-4-desktop is-3-widescreen" key={product.id}>
-                        <ProfileCard titulo={product.name} descripcion={product.description} img={product.img} />
+                        <ProfileCard titulo={product.nombre} descripcion={product.descripcion} img={product.img} />
                         <button className="button is-primary is-small rounded is-right">
                             <Link to={`/item/${product.id}`}>Ver Info</Link>
                         </button>
                     </div>
                 ))}
             </div>
+            <Auth/>
         </div>
     );
 };

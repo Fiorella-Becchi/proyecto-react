@@ -12,16 +12,6 @@ const NavBar = () => {
                     aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
-                {/*
-                <div className="collapse navbar-collapse justify-content-space-around" id="navbarNavDropdown">
-                    <ul className="navbar-nav">
-                        <li className="nav-item"> Quiénes Somos</li>
-                        <li className="nav-item">Nuestros Viajes</li>
-                        <li className="nav-item"> Sugerencias Viajeras</li>
-                        <li className="nav-item">Contacto</li>
-                    </ul>
-                </div>
-    */ }
             </div>
             <div className="container">
                 <div className="Categories column is-mobile ">
@@ -38,7 +28,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
-            <CartWidget/>
+            <CartWidget />
         </nav>
     )
 }

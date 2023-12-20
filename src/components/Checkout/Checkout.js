@@ -39,7 +39,7 @@ const Checkout = () => {
                     outOfStock.push({ id: doc.id, ...dataDoc })
                 }
             })
-            if (outOfStock.lenght === 0) {
+            if (outOfStock.length === 0) {
                 await batch.commit()
 
                 const orderRef = collection(db, 'orders')

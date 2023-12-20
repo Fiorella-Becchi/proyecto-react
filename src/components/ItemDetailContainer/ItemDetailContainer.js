@@ -14,11 +14,11 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-        const docRef = doc(db, 'products', itemId)
+        const docRef = doc(db, 'items', itemId)
         getDoc(docRef)
         .then((response) => {
             const data = response.data()
-            const productsAdapted = { id: response.id, ...data }
+            const productsAdapted = { id: response.id,  nombre: data.nombre, precio: data.precio, cantidad: data.cantidad }
             setProduct(productsAdapted)
         })
         .catch(error => {
