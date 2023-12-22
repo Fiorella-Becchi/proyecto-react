@@ -24,7 +24,7 @@ const ItemListContainer = ({ greeting }) => {
 
                 const productsAdapted = response.docs.map(doc => {
                     const data = doc.data();
-                    return { id: doc.id, nombre: data.nombre, precio: data.precio, cantidad: data.cantidad };
+                    return { id: doc.id, nombre: data.nombre, precio: data.precio, cantidad: data.stock, img: data.img };
                 });
                 console.log("Products Adapted:", productsAdapted)
                 setProducts(productsAdapted);
