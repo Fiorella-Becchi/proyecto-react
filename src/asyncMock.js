@@ -1,13 +1,13 @@
-import FranImg from "./img/francia.jpg";
-import BelgImg from "./img/belgica.jpg";
-import PortImg from "./img/portugal.jpg";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
-import ProfileCard from "./components/ProfileCard";
+//import FranImg from "./img/francia.jpg";
+//import BelgImg from "./img/belgica.jpg";
+//import PortImg from "./img/portugal.jpg";
+//import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+//import ProfileCard from "./components/ProfileCard";
 
 
-const products = [
-    {
-        id: '1',
+//const products = [
+    //{
+        /*id: '1',
         name: 'Portugal',
         price: 500,
         category: 'Viaje estudiantil',
@@ -82,6 +82,6 @@ export const getCategory = (categoryId) => {
         }, 500)
     })
 }
-
+*/
 
 
