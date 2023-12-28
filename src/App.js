@@ -3,6 +3,7 @@ import ProfileCard from "./components/ProfileCard";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
+import ItemDetail from "./components/ItemDetail/ItemDetail";
 import ItemCount from "./components/ItemCount/ItemCount";
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
@@ -14,7 +15,7 @@ import PortImg from "./img/portugal.jpg";
 import "bulma/css/bulma.css";
 
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import { CartProvider } from "./Context/CartContext";
+import { CartContext, CartProvider } from "./Context/CartContext";
 import { useEffect, useState } from "react";
 
 

@@ -1,5 +1,6 @@
 import './CheckoutForm.css';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 const CheckoutForm = ({ onConfirm }) => {
     const [name, setName] = useState('')

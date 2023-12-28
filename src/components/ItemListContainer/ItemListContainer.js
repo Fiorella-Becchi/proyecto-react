@@ -16,9 +16,15 @@ const ItemListContainer = ({ greeting }) => {
 
         const fetchProducts = async () => {
             try {
-                const collectionRef = categoryId
-                    ? query(collection(db, 'items'), where('items', '=='))
-                    : collection(db, 'items');
+                let collectionRef;
+
+                if (categoryId) {
+                    
+                    collectionRef = query(collection(db, 'items'), where('categoryId', '==', categoryId));
+                } else {
+                    
+                    collectionRef = collection(db, 'items');
+                }
 
                 const response = await getDocs(collectionRef);
 
@@ -51,7 +57,7 @@ const ItemListContainer = ({ greeting }) => {
                     </div>
                 ))}
             </div>
-            <Auth/>
+            <Auth />
         </div>
     );
 };

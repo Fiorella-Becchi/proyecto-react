@@ -25,6 +25,10 @@ const NavBar = () => {
                         <div className="column is-12-mobile is-6-tablet">
                             <NavLink to={'/category/viajedeparejas'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Viaje de Parejas</NavLink>
                         </div>
+                        <div className="column is-12-mobile is-6-tablet">
+                            <NavLink to={'/cart'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Carrito</NavLink>
+
+                        </div>
                     </div>
                 </div>
             </div>

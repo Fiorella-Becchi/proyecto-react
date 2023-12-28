@@ -1,6 +1,8 @@
 
 import './ItemCount.css';
 import { useState } from 'react';
+import { getDocs, collection, query, where } from "firebase/firestore";
+import { db } from "../../config/firebase";
 
 
 const ItemCount = ({ stock, initial, onAdd }) => {

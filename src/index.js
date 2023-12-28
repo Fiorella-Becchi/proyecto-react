@@ -1,7 +1,6 @@
 // 1) importo librerias react y react dom
 import React from "react";
 import ReactDOM from "react-dom/client";
-
 import App from "./App";
 
 // 2) obtener una referencia al div con id root
