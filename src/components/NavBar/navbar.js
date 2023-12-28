@@ -27,7 +27,9 @@ const NavBar = () => {
                         </div>
                         <div className="column is-12-mobile is-6-tablet">
                             <NavLink to={'/cart'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Carrito</NavLink>
-
+                        </div>
+                        <div className="column is-12-mobile is-6-tablet">
+                            <NavLink to={'/checkout'} className={({ isActive }) => isActive ? 'ActiveOption' : "Option"}>Orden</NavLink>
                         </div>
                     </div>
                 </div>

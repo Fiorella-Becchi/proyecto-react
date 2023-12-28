@@ -66,7 +66,7 @@ if (orderId) {
 }
 return (
     <div>
-        <h1>Chechout</h1>
+        <h1>Checkout</h1>
         <CheckoutForm onConfirm={createOrder} />
     </div>
 );
