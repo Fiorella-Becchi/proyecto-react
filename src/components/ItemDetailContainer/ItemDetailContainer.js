@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {
         getDoc(docRef)
         .then((response) => {
             const data = response.data()
-            const productsAdapted = { id: response.id,  nombre: data.nombre, precio: data.precio, cantidad: data.cantidad }
+            const productsAdapted = { id: response.id,  nombre: data.name, precio: data.price, cantidad: data.stock }
             setProduct(productsAdapted)
         })
         .catch(error => {

@@ -1,15 +1,16 @@
-
 import ItemCount from "../ItemCount/ItemCount";
 import FranImg from "../../img/francia.jpg";
 import BelgImg from "../../img/belgica.jpg";
 import PortImg from "../../img/portugal.jpg";
 import { useContext, useState } from 'react';
 import { Link } from "react-router-dom";
-import { CartContext } from "../../Context/CartContext";
+import { CartContext } from "../../Context/CartContext.js";
 
 
 
-const ItemDetail = ({ id, name, img, category, description, price, stock }) => {
+
+
+const ItemDetail = ({  id, name, img, category, description, price, stock }) => {
     const [quantityAdded, setQuantityAdded] = useState(0)
     const { addItem } = useContext(CartContext)
     const handleOnAdd = (quantity) => {

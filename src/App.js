@@ -38,8 +38,8 @@ function App() {
             <div className="container">
                 <div className="columns">
                     <div className="column is-12 ">
-                        <BrowserRouter>
-                            <CartProvider>
+                        <CartProvider>
+                            <BrowserRouter>
                                 <NavBar />
                                 <Routes>
                                     <Route path='/' element={<ItemListContainer />} />
@@ -49,9 +49,8 @@ function App() {
                                     <Route path='/checkout' element={<Checkout />} />
                                     <Route path='*' element={<h1>404 NOT FOUND</h1>} />
                                 </Routes>
-                            </CartProvider>
-                        </BrowserRouter>
-
+                            </BrowserRouter>
+                        </CartProvider>
                     </div>
 
                 </div>
